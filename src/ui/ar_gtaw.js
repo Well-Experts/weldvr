@@ -1,0 +1,98 @@
+// Arabic interface text for the GTAW (141, TIG) module (DRAFT for review by an Arabic-speaking welding
+// specialist). Standard names, AWS / ISO classifications, clause numbers and units are not translated.
+
+export const AR_GTAW = {
+  // ---- process, machine, consumables ---------------------------------------------------------------
+  'TIG, tungsten inert gas (141)': 'لحام TIG بقطب التنجستن والغاز الخامل (141)',
+  'TIG power source, DC constant current': 'مصدر قدرة TIG، تيار مستمر ثابت',
+  'Argon (ISO 14175 I1)': 'أرغون (ISO 14175 I1)',
+  'Argon': 'أرغون',
+  'Tungsten': 'التنجستن',
+  'tungsten': 'التنجستن',
+  'Filler rod': 'سلك الحشو',
+  '2% ceriated': 'مضاف إليه 2% سيريوم',
+  '1.5% lanthanated': 'مضاف إليه 1.5% لانثانوم',
+  '2% lanthanated': 'مضاف إليه 2% لانثانوم',
+  '2% thoriated (radioactive)': 'مضاف إليه 2% ثوريوم (مشع)',
+  'pure tungsten (AC only)': 'تنجستن نقي (للتيار المتردد فقط)',
+  'grey': 'رمادي',
+  'gold': 'ذهبي',
+  'blue': 'أزرق',
+  'red': 'أحمر',
+  'green': 'أخضر',
+  'ER70S-2 (triple deoxidised)': 'ER70S-2 (مزال الأكسدة ثلاثياً)',
+  'ER70S-6 (high Mn, Si)': 'ER70S-6 (منغنيز وسيليكون مرتفعان)',
+  'Arc burning: amperage control at {p}%': 'القوس مشتعل: التحكم بالأمبير عند {p}%',
+  'Post-flow: {s} s': 'التدفق اللاحق: {s} ث',
+  'Post-flow': 'التدفق اللاحق',
+  'post-flow': 'التدفق اللاحق',
+  'at least': 'على الأقل',
+  'Arc start': 'بدء القوس',
+  'HF (no touch)': 'HF (بدون لمس)',
+  'Lift-arc': 'بدء بالرفع (Lift-arc)',
+  'Argon flows from the pre-flow when the torch switch is pressed, during the weld and through the post-flow after the arc.': 'يتدفق الأرغون من التدفق المسبق عند ضغط مفتاح الشعلة، وطوال اللحام، وخلال التدفق اللاحق بعد انطفاء القوس.',
+  'Push angle': 'زاوية الدفع',
+  'push angle': 'زاوية الدفع',
+  'contaminated': 'ملوث',
+  'oxidised': 'متأكسد',
+  'rod': 'السلك',
+  'Regrind tungsten': 'إعادة سن التنجستن',
+  'New rod': 'سلك جديد',
+  'New filler rod: {f} Ø {d} mm.': 'سلك حشو جديد: {f} Ø {d} مم.',
+  'Fillet (T-joint), 3.2 mm sheet': 'لحام زاوية (وصلة T)، صفيح 3.2 مم',
+  'Bead on plate, 3.2 mm sheet': 'خط لحام على لوح، صفيح 3.2 مم',
+
+  // ---- practice hints and tips ---------------------------------------------------------------------------
+  'Trigger: switch and current. Rod hand: stick feeds, A/X new rod. Torch hand: A/X regrind, B/Y helmet.': 'الزناد: التشغيل والتيار. يد السلك: العصا تغذّي، A/X سلك جديد. يد الشعلة: A/X إعادة السن، B/Y الخوذة.',
+  'Hold the tungsten 1.6–3.2 mm from the work and push the torch 10–20° (70–80° to the work). Never touch the work or the pool with the tungsten.': 'ثبّت التنجستن على بعد 1.6–3.2 مم من قطعة العمل وادفع الشعلة بزاوية 10–20° (70–80° مع قطعة العمل). لا تلمس قطعة العمل أو الحوض المنصهر بالتنجستن أبداً.',
+  'Dab the rod into the front edge of the pool at 10–20° to the work and pull it back a little; keep the hot rod end inside the argon and away from the tungsten.': 'اغمس السلك في الحافة الأمامية للحوض بزاوية 10–20° مع قطعة العمل ثم اسحبه قليلاً؛ أبقِ طرفه الساخن داخل الأرغون وبعيداً عن التنجستن.',
+  'At the end, ease off the amperage control while adding filler to fill the crater, then hold the torch over it until the post-flow stops.': 'في النهاية خفّف التحكم بالأمبير مع إضافة الحشو لملء الفوهة، ثم أبقِ الشعلة فوقها حتى يتوقف التدفق اللاحق.',
+
+  // ---- live messages ---------------------------------------------------------------------------------------
+  'Stop the arc before you regrind the tungsten.': 'أطفئ القوس قبل إعادة سن التنجستن.',
+  'Tungsten reground: contaminated end removed and the point ground lengthwise.': 'أعيد سن التنجستن: أزيل الطرف الملوث وجُلخ الرأس طولياً.',
+  'Tungsten reground. Thoriated tungsten is radioactive: grind it only on a dedicated grinder with local exhaust (AWS Fact Sheet 27), or use a ceriated or lanthanated tungsten.': 'أعيد سن التنجستن. التنجستن المحتوي على الثوريوم مشع: اجلخه فقط على جلاخة مخصصة مع شفط موضعي (نشرة AWS رقم 27)، أو استخدم تنجستن بالسيريوم أو اللانثانوم.',
+  'Tungsten touched the work: it is contaminated. Stop and regrind it (A / X on the torch hand).': 'لمس التنجستن قطعة العمل فتلوث. توقف وأعد سنه (A / X بيد الشعلة).',
+  'Scratch start: do not strike like a match. Touch, then lift (lift-arc), or use HF.': 'بدء بالخدش: لا تُشعل القوس كعود الثقاب. المس ثم ارفع (Lift-arc) أو استخدم HF.',
+  'Tungsten dipped into the pool: contaminated, and tungsten left in the weld. Stop and regrind it.': 'غُمس التنجستن في الحوض: تلوث وبقي تنجستن داخل اللحام. توقف وأعد سنه.',
+  'The filler rod touched the tungsten: it is contaminated. Stop and regrind it.': 'لمس سلك الحشو التنجستن فتلوث. توقف وأعد سنه.',
+  'The tungsten is melting into the pool: too much current for this tungsten, or the wrong polarity (use DCEN).': 'التنجستن يذوب في الحوض: تيار أعلى من قدرة هذا التنجستن أو قطبية خاطئة (استخدم DCEN).',
+  'The hot end of the rod left the gas shield and oxidised. Keep the rod tip inside the argon.': 'خرج طرف السلك الساخن من حماية الغاز فتأكسد. أبقِ طرف السلك داخل الأرغون.',
+  'Post-flow too short for this current: the tungsten oxidised (about 1 s per 10 A, at least 8 s).': 'التدفق اللاحق أقصر مما يلزم لهذا التيار: تأكسد التنجستن (نحو ثانية لكل 10 A، و8 ثوانٍ على الأقل).',
+  'Torch moved away during the post-flow: the hot tungsten oxidised. Hold the torch over the crater until the gas stops.': 'أُبعدت الشعلة أثناء التدفق اللاحق فتأكسد التنجستن الساخن. أبقِ الشعلة فوق الفوهة حتى يتوقف الغاز.',
+  'Rod too short to hold: take a new rod (A / X on the rod hand).': 'السلك أقصر من أن يُمسك: خذ سلكاً جديداً (A / X بيد السلك).',
+  'The arc went out: the torch was lifted too far from the work.': 'انطفأ القوس: رُفعت الشعلة بعيداً جداً عن قطعة العمل.',
+  'Tungsten contaminated: stop and regrind it (A / X on the torch hand).': 'التنجستن ملوث: توقف وأعد سنه (A / X بيد الشعلة).',
+  'Tungsten oxidised (blue-black): regrind it, and keep the post-flow on it next time.': 'التنجستن متأكسد (أزرق مسود): أعد سنه وأبقِ عليه التدفق اللاحق في المرة القادمة.',
+  'Arc too long: hold the tungsten 1.6–3.2 mm from the work.': 'القوس طويل جداً: ثبّت التنجستن على بعد 1.6–3.2 مم من قطعة العمل.',
+  'Rod end oxidised: keep the hot rod tip inside the argon shield.': 'طرف السلك متأكسد: أبقِ طرف السلك الساخن داخل حماية الأرغون.',
+  'Add filler: dab the rod into the front edge of the pool.': 'أضف الحشو: اغمس السلك في الحافة الأمامية للحوض.',
+
+  // ---- About -----------------------------------------------------------------------------------------------
+  'Phase 1 prototype, release 1.4: GMAW (135), FCAW (136, 114), SMAW (111) and GTAW (141) on carbon steel: bead-on-plate drills, fillet and butt joints in PA–PG positions, live imperfections and code judging, technique exercises, and the Inspector and Tracking labs.':
+    'نموذج المرحلة 1، الإصدار 1.4: لحام GMAW (135) وFCAW (136، 114) وSMAW (111) وGTAW (141) على الفولاذ الكربوني: تمارين خطوط على لوح، ووصلات زاوية وتناكبية في الوضعيات PA–PG، وعيوب مباشرة وحكم وفق المواصفات، وتمارين تقنية، ومختبرا الفحص والتتبع.',
+  'Release 1.4 adds TIG welding (GTAW, 141) on 3.2 mm sheet: a torch with a fingertip amperage control on the trigger, HF or lift-arc starts, a filler rod fed by the other hand, argon pre- and post-flow, and the consequences of tungsten contamination, a short post-flow, too much argon and the wrong polarity.':
+    'يضيف الإصدار 1.4 لحام TIG ‏(GTAW، 141) على صفيح 3.2 مم: شعلة بتحكم في الأمبير على الزناد، وبدء القوس بالتردد العالي HF أو بالرفع، وسلك حشو تغذّيه اليد الأخرى، وتدفق مسبق ولاحق للأرغون، وعواقب تلوث التنجستن وقِصَر التدفق اللاحق وزيادة الأرغون والقطبية الخاطئة.',
+
+  // ---- PPE job ---------------------------------------------------------------------------------------------
+  'TIG fillet weld on 3.2 mm sheet': 'لحام زاوية TIG على صفيح 3.2 مم',
+  'GTAW (141) fillet weld on 3.2 mm (1/8 in) steel sheet, horizontal position (PB), 2.4 mm ceriated tungsten, ER70S-2 filler rod, argon. One hand holds the torch, the other feeds the rod close to the arc.': 'لحام زاوية GTAW (141) على صفيح فولاذي 3.2 مم (1/8 بوصة) بالوضع الأفقي (PB)، تنجستن بالسيريوم 2.4 مم، سلك حشو ER70S-2، أرغون. يد تمسك الشعلة والأخرى تغذّي السلك قريباً من القوس.',
+
+  // ---- troubleshooting (GTAW) ---------------------------------------------------------------------------
+  'Too much argon on the TIG torch': 'أرغون زائد في شعلة TIG',
+  'Argon flow far above the WPS range: the turbulent gas stream draws air into the shield': 'تدفق الأرغون أعلى بكثير من مدى WPS: تيار الغاز المضطرب يسحب الهواء إلى منطقة الحماية',
+  'Tungsten dipped into the pool': 'غُمس التنجستن في الحوض',
+  'Set the argon flow inside the WPS range: 10–25 CFH, 4.7–11.8 L/min (Miller).': 'اضبط تدفق الأرغون ضمن مدى WPS: ‏10–25 CFH أي 4.7–11.8 لتر/دقيقة (Miller).',
+  'Look at the bead surface, then at the flowmeter.': 'انظر إلى سطح خط اللحام ثم إلى مقياس التدفق.',
+  'TIG welding on DCEP': 'لحام TIG على DCEP',
+  'Machine on DCEP: most of the heat goes into the tungsten, which melts into the pool, and the weld is shallow': 'الماكينة على DCEP: معظم الحرارة تذهب إلى التنجستن فيذوب في الحوض ويكون اللحام ضحلاً',
+  'Argon flow too low': 'تدفق الأرغون منخفض جداً',
+  'Argon flow too high': 'تدفق الأرغون مرتفع جداً',
+  'Filler rod pulled out of the gas': 'سُحب سلك الحشو خارج الغاز',
+  'Current too high for the sheet': 'التيار مرتفع جداً للصفيح',
+  'Set the machine to DCEN (electrode negative) for TIG welding of steel, and regrind the tungsten before welding again.': 'اضبط الماكينة على DCEN (القطب سالب) للحام الفولاذ بطريقة TIG، وأعد سن التنجستن قبل اللحام مجدداً.',
+  'Look at the tungsten and at the polarity on the machine. Then cut a macro section.': 'انظر إلى التنجستن وإلى القطبية على الماكينة، ثم اقطع مقطعاً عيانياً.',
+  'The hot rod end was pulled out of the argon between dabs: it oxidised and the oxide went into the pool': 'سُحب طرف السلك الساخن خارج الأرغون بين الغمسات فتأكسد ودخل الأكسيد إلى الحوض',
+  'Keep the hot end of the rod inside the argon shield all the time: dab it into the front of the pool and pull it back only a little (Miller, ESAB).': 'أبقِ الطرف الساخن للسلك داخل حماية الأرغون طوال الوقت: اغمسه في مقدمة الحوض واسحبه قليلاً فقط (Miller وESAB).',
+  'The machine and the gas are set right. Think about what the rod hand did between dabs.': 'الماكينة والغاز مضبوطان. فكّر فيما فعلته يد السلك بين الغمسات.',
+};
