@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!--PAGE-->
+<title>VR Welding Simulator</title>
+<style>
+  /* Layout: one full-screen 3D canvas; a thin top bar and a help sheet float over it.
+     Single dark look (a welding booth); system fonts so the headset needs no network for type. */
+  :root {
+    color-scheme: dark;
+    --bg: #0e1116;
+    --panel: rgba(14, 19, 26, 0.94);
+    --panel-solid: #141b24;
+    --fg: #e9eef4;
+    --dim: #9aabbd;
+    --line: #2e3d4f;
+    --accent: #f2b51c;
+    --accent-ink: #17120a;
+    --font-ui: "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+    --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-ui); overflow: hidden; }
+  #app { position: fixed; inset: 0; }
+  #app canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+  .bar { position: fixed; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding: calc(10px + env(safe-area-inset-top, 0px)) 16px 10px; background: linear-gradient(rgba(10, 13, 17, 0.92), rgba(10, 13, 17, 0)); pointer-events: none; }
+  .brand { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+  .brand .we { color: var(--accent); font-weight: 700; font-size: 12px; letter-spacing: 0.12em; }
+  .brand .title { font-weight: 700; font-size: 18px; text-wrap: balance; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; pointer-events: auto; }
+  button.xr { font: inherit; font-weight: 600; font-size: 15px; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-solid); color: var(--fg); cursor: pointer; }
+  button.xr.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  button.xr:disabled { opacity: 0.45; cursor: not-allowed; }
+  button.xr:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .note { position: fixed; left: 16px; right: 16px; top: calc(68px + env(safe-area-inset-top, 0px)); color: var(--dim); font-size: 14px; pointer-events: none; text-shadow: 0 1px 2px #000; }
+  .status { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); max-width: min(92vw, 680px); padding: 10px 16px; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--accent); font-size: 14px; opacity: 0; transition: opacity 0.25s; pointer-events: none; }
+  .status.show { opacity: 1; }
+  .help { box-sizing: border-box; position: fixed; right: 16px; top: calc(72px + env(safe-area-inset-top, 0px)); width: min(440px, calc(100vw - 32px)); max-height: calc(100% - 110px); overflow: auto;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; font-size: 14px; line-height: 1.5; }
+  .help h2 { margin: 0 0 8px; font-size: 16px; }
+  .help ol { margin: 0 0 10px; padding-inline-start: 20px; display: grid; gap: 6px; }
+  .help code { font-family: var(--font-mono); font-size: 12.5px; background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; white-space: nowrap; }
+  .help dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 0 0 10px; }
+  .help dt { color: var(--accent); font-weight: 600; }
+  .help dd { margin: 0; min-width: 0; }
+  .help p { margin: 0 0 8px; color: var(--dim); }
+  body.in-xr .bar, body.in-xr .note, body.in-xr .help { display: none; }
+  @media (max-width: 520px) {
+    .brand .title { font-size: 15px; }
+    button.xr { font-size: 13px; padding: 8px 10px; }
+    .note { top: calc(112px + env(safe-area-inset-top, 0px)); }
+    .help { top: calc(112px + env(safe-area-inset-top, 0px)); max-height: calc(100% - 130px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .status { transition: none; } }
+</style>
+<!--/HEAD-->
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

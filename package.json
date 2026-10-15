@@ -1,0 +1,19 @@
+{
+  "name": "weldvr",
+  "version": "1.7.0",
+  "private": true,
+  "description": "WELL EXPERTS VR welding simulator (WebXR, Meta Quest 3S) - Phase 1: GMAW/FCAW/SMAW plate, SMAW open-root pipe, GTAW sheet, oxy-fuel cutting, safety and PPE, Inspector lab",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "pages": "node build.mjs --pages",
+    "test": "node --test tests/unit/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "iwer": "2.6.0"
+  }
+}
